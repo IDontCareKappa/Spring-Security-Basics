@@ -10,7 +10,7 @@ public class QuotationApi {
 
     private List<Quotation> quotations;
 
-    public QuotationApi(List<Quotation> quotations) {
+    public QuotationApi(/*List<Quotation> quotations*/) {
         this.quotations = new ArrayList<>();
         quotations.add(new Quotation(
                 "To, że milczę, nie znaczy, że nie mam nic do powiedzenia.",
@@ -24,6 +24,7 @@ public class QuotationApi {
 
     @GetMapping("/api")
     public List<Quotation> getQuotations() {
+        new QuotationApi();
         return quotations;
     }
 
